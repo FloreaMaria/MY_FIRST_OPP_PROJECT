@@ -13,7 +13,7 @@ public:
 
     nod();
     nod(char info, nod *next);
-    ~nod();
+    ~nod() = default;
 
     char getinfo()
     {
@@ -39,12 +39,6 @@ nod::nod(char info, nod *next)
 {
     this -> info = info;
     this -> next = next;
-}
-
-nod::~nod()
-{
-
-    ///cout << "S-a apelat destructorul clasei nod" << "\n";
 }
 
 void nod::SetNext(nod* const& a)
